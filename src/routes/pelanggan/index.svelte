@@ -1,16 +1,13 @@
 <script>
-import FloatingButton from "../../components/floatingButton.svelte";
+  import FloatingButton from '../../components/floatingButton.svelte';
 
-
-function goToAddPage(){
-    // window.location.href = "/pelanggan/add";
-    alert('test')
-
-}
+  function add(event) {
+    window.location.href = '/pelanggan/add';
+  }
 </script>
+
 <div>
-ini halaman pelanggan
+  ini halaman pelanggan
 
-<FloatingButton on:click={goToAddPage}/>
-
+  <FloatingButton on:click={add} />
 </div>

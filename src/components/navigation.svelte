@@ -7,7 +7,7 @@
     <NavigationLink to="/" label="Home" iconName="home" />
     <NavigationLink to="/tagihan" label="Tagihan" iconName="cash"/>
     <NavigationLink to="/pelanggan" label="Pelanggan" iconName="users"/>
-    <NavigationLink to="/kolektor" label="Kolektor" iconName="collection"/>
+    <NavigationLink to="/karyawan" label="Karyawan" iconName="collection"/>
     <NavigationLink to="/layanan" label="Layanan" iconName="service"/>
     <NavigationLink to="/setting" label="Pengaturan" iconName="setting"/>
   </div>
