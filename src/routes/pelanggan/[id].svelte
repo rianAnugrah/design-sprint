@@ -1,3 +1,0 @@
-<div>
-    PElanggan Detail
-</div>
