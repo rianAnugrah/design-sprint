@@ -3,7 +3,7 @@
 import supabase from '$lib/db'
 async function getData() {
   const { data, error } = await supabase
-    .from('games')
+    .from('freelancers')
     .select()
   if (error) throw new Error(error.message)
   
@@ -19,7 +19,7 @@ async function getData() {
   <p>Fetching data...</p>
 {:then data}
   {#each data as game}
-    <li>{game.name}</li>
+    <li>{game.id}</li>
   {/each}
 {:catch error}
   <p>Something went wrong while fetching the data:</p>
