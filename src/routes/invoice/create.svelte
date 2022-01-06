@@ -10,6 +10,14 @@
   const handleChangeInvoice = () => {
     goto('/invoice/change');
   };
+
+  const handleChangeCustomer = () => {
+    goto('/invoice/customer');
+  };
+
+  const handleAddItem = () => {
+    goto('/invoice/add-item');
+  };
 </script>
 
 <div>
@@ -23,15 +31,23 @@
   <Section label="Customer">
     {#if $customer.name}
       <div>{$customer.name}</div>
+      <Button label="Change" icon="plus" on:click={handleChangeCustomer} />
     {:else}
-      Add Customer
+      <Button
+        label="Add Customer"
+        icon="plus"
+        on:click={handleChangeCustomer}
+      />
     {/if}
   </Section>
   <Section label="Items">
     {#if $items.length > 0}
-      <!-- <div>{$items}</div> -->
+      {#each $items as item}
+        <div>{item.name}</div>
+      {/each}
+      <Button label="Add Item" icon="plus" on:click={handleAddItem} />
     {:else}
-      Add Items
+      <Button label="Add Item" icon="plus" on:click={handleAddItem} />
     {/if}
   </Section>
   <Section label="Total">Total</Section>
