@@ -1,5 +1,6 @@
 <script>
   import supabase from '$lib/db';
+  import { ui } from '../store/storeClass';
 
   let loading = false;
   let email;
@@ -34,17 +35,17 @@
 
 <form class="row flex flex-center" on:submit|preventDefault={handleLogin}>
   <div class="col-6 form-widget">
-    <h1 class="header">Supabase + Svelte</h1>
-    <p class="description">Sign in via magic link with your email below</p>
+    <h1 class="header">Solos</h1>
+    <p class="description">Sign in with your email and password</p>
     <div>
       <input
-        class="inputField"
+        class={$ui.input + ' mb-2 border-red-500 border'}
         type="email"
         placeholder="Your email"
         bind:value={email}
       />
       <input
-        class="inputField"
+        class={$ui.input + ' mb-2 border-red-500 border'}
         type="password"
         placeholder="Your password"
         bind:value={password}
