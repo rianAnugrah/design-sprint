@@ -69,7 +69,5 @@
   <Section label="Note">Note</Section>
   <Button label="Next" on:click={handlePreview} />
 
-  <a href="https://api.whatsapp.com/send?phone=nomor_WA&text=pesan_kamu"
-    >WhatSapp</a
-  >
+
 </div>

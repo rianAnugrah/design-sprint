@@ -18,18 +18,16 @@
     user.set(session.user);
   });
 
-
   const isPreview = $page.query.get('view');
 </script>
 
 {#if $user}
-  <div class="w-screen h-screen bg-slate-100 flex flex-col md:flex-row">
-    <Navigation />
-
-    <div class="w-full h-full p-4">
-      <div class="w-full py-2">
-        <Search />
-      </div>
+  <div class="w-screen h-screen bg-[#F3F5F9] flex flex-col ">
+    <!-- <Navigation /> -->
+    <div class="w-full">
+      <Search />
+    </div>
+    <div class="w-full">
       <slot />
       <div class="h-24 block " />
     </div>

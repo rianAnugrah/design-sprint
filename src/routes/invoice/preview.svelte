@@ -5,6 +5,7 @@
   import Button from '../../components/button.svelte';
   import { user } from '../../store/storeSeesion';
 import { items } from '../../store/itemsStore';
+import { page } from '$app/stores';
   let submit = false;
 
   async function sendData() {
@@ -39,3 +40,7 @@ import { items } from '../../store/itemsStore';
     <pre>{error}</pre>
   {/await}
 {/if}
+
+<a href={`https://api.whatsapp.com/send?phone=nomor_WA&text=Buruan Bayar Wooy !\Klik disini`}
+>WhatSapp</a
+>

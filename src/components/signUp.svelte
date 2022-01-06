@@ -1,4 +1,6 @@
 <script>
+  import { goto } from '$app/navigation';
+
   import supabase from '$lib/db';
   import { ui } from '../store/storeClass';
 
@@ -25,6 +27,7 @@
       const { error } = await supabase.auth.signIn({ email, password });
       if (error) throw error;
       alert('Login Success');
+      goto('/');
     } catch (error) {
       alert(error.error_description || error.message);
     } finally {
