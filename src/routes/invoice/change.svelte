@@ -15,7 +15,7 @@
 <input type="date" bind:value={$invoice.date} class={$ui.input} />
 <label>Due date</label>
 <input type="date" bind:value={$invoice.due_date} class={$ui.input} />
-<label>Due days</label>
-<input type="number" bind:value={$invoice.due_days} class={$ui.input} />
+<!-- <label>Due days</label>
+<input type="number" bind:value={$invoice.due_days} class={$ui.input} /> -->
 
 <Button label="Back" on:click={handleBack} />

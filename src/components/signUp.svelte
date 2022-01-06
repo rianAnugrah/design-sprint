@@ -3,8 +3,8 @@
   import { ui } from '../store/storeClass';
 
   let loading = false;
-  let email;
-  let password;
+  let email = 'tester@theravenry.com';
+  let password = 'tester12345678';
 
   const handleRegister = async () => {
     try {

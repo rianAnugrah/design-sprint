@@ -8,6 +8,6 @@
     <NavigationLink to="/invoice" label="Invoice" iconName="cash" />
     <NavigationLink to="/customer" label="Customer" iconName="users" />
     <!-- <NavigationLink to="/payment" label="Payments" iconName="cash" /> --> 
-    <NavigationLink to="/" label="Profile" iconName="user" />
+    <NavigationLink to="/profile" label="Profile" iconName="user" />
   </div>
 </div>

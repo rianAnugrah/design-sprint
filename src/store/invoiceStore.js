@@ -1,13 +1,18 @@
+import moment from 'moment';
 import { writable } from 'svelte/store';
+import { user } from './storeSeesion';
 
 export const invoice = writable({
-  number: '1',
-  date: "06 Jan 2022",
-  due_days: 7,
-  due_date: "15 Jan 2022",
-  my_signature: false,
-  notes: '',
+  created_by: null,
+  number: 1,
+  date: moment(new Date()).format("YYYY-MM-DD"),
+  due_date: moment(new Date()).format("YYYY-MM-DD"),
+  // due_days: 0,
+  is_active: false,
   status: '',
-  is_read: '',
-  is_paid: ''
+  is_paid: false,
+  payment_method: '',
+  total: 0,
+  discount: 0,
+  customer_id: null
 });
