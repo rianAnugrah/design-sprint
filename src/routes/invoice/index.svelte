@@ -26,6 +26,7 @@ import { title } from '../../store/storeSeesion';
   const handleClick = (invoice) => {
     goto(`/invoice/view?id=${invoice.id}`);
   };
+  
 </script>
 
 <div class="block bg-white px-4 pb-4 shadow">

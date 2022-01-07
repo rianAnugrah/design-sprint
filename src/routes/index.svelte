@@ -25,9 +25,14 @@ async function getData() {
   <p>Something went wrong while fetching the data:</p>
   <pre>{error}</pre>
 {/await} -->
+<script>
+  import { goto } from '$app/navigation';
 
+  import { onMount } from 'svelte';
 
+  onMount(async () => {
+    goto('/invoice');
+  });
+</script>
 
-<div>
-  This is holmes
-</div>
+<div>This is holmes</div>
