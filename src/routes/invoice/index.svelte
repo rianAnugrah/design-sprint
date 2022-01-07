@@ -24,7 +24,7 @@ import { title } from '../../store/storeSeesion';
   });
 
   const handleClick = (invoice) => {
-    goto(`/invoice/view?id=${invoice.id}`);
+    goto(`/invoice/preview?id=${invoice.id}`);
   };
   
 </script>

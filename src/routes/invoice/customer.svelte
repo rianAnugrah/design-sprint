@@ -41,7 +41,7 @@
       </div>
       <div class="my-2">
         <div class="mb-2 font-bold">Phone</div>
-        <input type="text" bind:value={$customer.phone} class={$ui.input} />
+        <input type="text" bind:value={$customer.phone} placeholder="+62XXX" class={$ui.input} />
       </div>
       <div class="my-2">
         <div class="mb-2 font-bold">Address</div>
