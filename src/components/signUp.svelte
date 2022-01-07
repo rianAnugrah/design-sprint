@@ -3,6 +3,7 @@
 
   import supabase from '$lib/db';
   import { ui } from '../store/storeClass';
+  import Button from './button.svelte';
 
   let loading = false;
   let email = 'tester@theravenry.com';
@@ -36,26 +37,33 @@
   };
 </script>
 
-<form class="row flex flex-center" on:submit|preventDefault={handleLogin}>
-  <div class="col-6 form-widget">
-    <h1 class="header">Solos</h1>
-    <p class="description">Sign in with your email and password</p>
+<form
+  class="row flex flex-center items-center justify-center h-screen w-screen p-6"
+  on:submit|preventDefault={handleLogin}
+>
+  <div class="col-6 form-widget flex items-center flex-col">
+    <h1 class="text-3xl font-bold ">Solos</h1>
+    <p class="py-6">Sign in with your email and password</p>
     <div>
+      <span class="my-2">Email</span>
       <input
-        class={$ui.input + ' mb-2 border-red-500 border'}
+        class={$ui.input + ' mb-2 '}
         type="email"
         placeholder="Your email"
         bind:value={email}
       />
+      <span class="my-2">Password</span>
+
       <input
-        class={$ui.input + ' mb-2 border-red-500 border'}
+        class={$ui.input + ' mb-2 '}
         type="password"
         placeholder="Your password"
         bind:value={password}
       />
     </div>
-    <div>
-      <input
+    <div class="py-6">
+      <Button
+        label="Login"
         type="submit"
         class="button block"
         value={loading ? 'Loading' : 'Login'}
