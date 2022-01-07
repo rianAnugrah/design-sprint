@@ -6,5 +6,5 @@
 </script>
 
 <div class="w-full m-0 p-0 flex justify-between items-center bg-white">
-  <div class="font-bold text-3xl text-left p-4">{$title}</div>
+  <div class="font-bold text-xl text-left p-4">{$title}</div>
 </div>

@@ -5,8 +5,8 @@ import { user } from './storeSeesion';
 export const invoice = writable({
   created_by: null,
   number: 1,
-  date: moment(new Date()).format("YYYY-MM-DD"),
-  due_date: moment(new Date()).format("YYYY-MM-DD"),
+  date: moment(new Date()).format('YYYY-MM-DD'),
+  due_date: moment(new Date()).format('YYYY-MM-DD'),
   // due_days: 0,
   is_active: false,
   status: '',
@@ -14,5 +14,6 @@ export const invoice = writable({
   payment_method: '',
   total: 0,
   discount: 0,
-  customer_id: null
+  customer_id: null,
+  tax: 0
 });

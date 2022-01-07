@@ -24,12 +24,12 @@
 {#if $user}
   <div class="w-screen h-screen bg-[#F3F5F9] flex flex-col ">
     <!-- <Navigation /> -->
-    <div class="w-full">
+    <div class="w-full bg-[#F3F5F9]">
       <Search />
     </div>
-    <div class="w-full">
+    <div class="w-full pb-36 bg-[#F3F5F9]">
       <slot />
-      <div class="h-24 block " />
+    <!-- <div class="h-28 block"/> -->
     </div>
   </div>
 {:else if isPreview}

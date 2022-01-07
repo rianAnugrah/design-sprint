@@ -10,10 +10,13 @@
   };
 
   import { onMount } from 'svelte';
+import { title } from '../../store/storeSeesion';
 
   let invoices = [];
 
   onMount(async () => {
+    title.set("Invoice")
+
     const { data, error } = await supabase.from('invoice').select('*');
     if (error) throw new Error(error.message);
     invoices = data;

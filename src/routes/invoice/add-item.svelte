@@ -4,6 +4,8 @@
   import Button from '../../components/button.svelte';
   import { ui } from '../../store/storeClass';
   import { item, items } from '../../store/itemsStore';
+  import { onMount } from 'svelte';
+  import { title } from '../../store/storeSeesion';
 
   const handleAdd = () => {
     let number = $items;
@@ -12,22 +14,33 @@
     item.set({ name: '', description: '', price: '', qty: '' });
     goto('/invoice/create');
   };
-  const handleBack = () => {
-    goto('/invoice/create');
-  };
+
+  onMount(async () => {
+    title.set('Add Item');
+  });
 </script>
 
-<label>Name</label>
-<input type="text" bind:value={$item.name} class={$ui.input} />
-
-<label>Description</label>
-<textarea type="text" bind:value={$item.description} class={$ui.input} />
-
-<label>Price</label>
-<input type="number" bind:value={$item.price} class={$ui.input} />
-
-<label>Qty</label>
-<input type="number" bind:value={$item.qty} class={$ui.input} />
-
-<Button label="Add" on:click={handleAdd} />
-<Button label="Back" on:click={handleBack} />
+<div class="flex w-full h-full items-center justify-center p-4">
+  <div class="w-full  shadow rounded-xl bg-white p-4  ">
+    <div class="my-2">
+      <div class="mb-2 font-bold">Name</div>
+      <input type="text" bind:value={$item.name} class={$ui.input} />
+    </div>
+    <div class="my-2">
+      <div class="mb-2 font-bold">Description</div>
+      <textarea type="text" bind:value={$item.description} class={$ui.input} />
+    </div>
+    <div class="my-2">
+      <div class="mb-2 font-bold">Price</div>
+      <input type="number" bind:value={$item.price} class={$ui.input} />
+    </div>
+    <div class="my-2">
+      <div class="mb-2 font-bold">Qty</div>
+      <input type="number" bind:value={$item.qty} class={$ui.input} />
+    </div>
+    <div class="w-full flex justify-center items-center mt-4">
+      <Button label="Add Item" on:click={handleAdd} />
+    </div>
+  </div>
+</div>
+<!-- <Button label="Back" on:click={handleBack} /> -->

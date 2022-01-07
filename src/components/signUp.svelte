@@ -27,7 +27,7 @@
       const { error } = await supabase.auth.signIn({ email, password });
       if (error) throw error;
       alert('Login Success');
-      goto('/');
+      goto('/invoice');
     } catch (error) {
       alert(error.error_description || error.message);
     } finally {

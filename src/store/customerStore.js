@@ -4,5 +4,6 @@ export const customer = writable({
   name: '',
   email: '',
   phone: '',
-  company_name: ''
+  company_name: '',
+  address: ''
 });

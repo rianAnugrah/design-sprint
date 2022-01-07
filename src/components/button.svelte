@@ -15,14 +15,14 @@
 
 <div class="">
   <button
-    class="bg-blue-600 shadow rounded-xl  p-2 flex items-center text-white"
+    class="bg-blue-600 shadow rounded-full  h-[50px] text-center w-[150px] p-2 flex items-center text-white"
     on:click={sayHello}
   >
     {#if icon}
       <Icon name={icon} customClass="h-5 w-5 text-white" />
     {/if}
     {#if label}
-      <p class="px-2">{label}</p>
+      <p class="px-2 text-center w-full">{label}</p>
     {/if}
   </button>
 </div>
