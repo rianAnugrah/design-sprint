@@ -15,5 +15,10 @@ export const invoice = writable({
   total: 0,
   discount: 0,
   customer_id: null,
-  tax: 0
+  tax: 0,
+  vat: 10,
+  grand_total: 0,
+  total: 0,
+  title: '',
+  notes: ''
 });

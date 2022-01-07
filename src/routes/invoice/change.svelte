@@ -21,6 +21,14 @@
       <div class="mb-2 font-bold">Number</div>
       <input type="number" bind:value={$invoice.number} class={$ui.input} />
     </div>
+    <div class="my-2">
+      <div class="mb-2 font-bold">Title</div>
+      <input type="text" bind:value={$invoice.title} class={$ui.input} />
+    </div>
+    <div class="my-2">
+      <div class="mb-2 font-bold">Tax %</div>
+      <input type="number" bind:value={$invoice.tax} class={$ui.input} />
+    </div>
     <div class="my-2 ">
       <div class="mb-2 font-bold">Date</div>
       <input type="date" bind:value={$invoice.date} class={$ui.input} />
